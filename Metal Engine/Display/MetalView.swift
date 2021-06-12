@@ -10,7 +10,6 @@ import MetalKit
 class MetalView: MTKView {
     
     var renderer: Renderer!
-    
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -23,7 +22,6 @@ class MetalView: MTKView {
         self.renderer = Renderer()
         self.delegate = renderer
     }
-    
     
     // Mouse Input
     

@@ -13,21 +13,12 @@ class GameObject: Node {
     
     var mesh: Mesh!
     
-    
     init(meshType: MeshTypes) {
         mesh = MeshLibrary.Mesh(meshType)
         
     }
     
-    var time: Float = 0
-    func update(deltaTime: Float) {
-        time += deltaTime
-        
-        self.position.x = cos(time) / 2
-        self.position.y = sin(time) / 2
-        self.scale = simd_float3(repeating: 0.5)
-        self.rotation.z = time
-        
+    override func update(deltaTime: Float) {
         updateModelConstants()
     }
     
